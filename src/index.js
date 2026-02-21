@@ -11,6 +11,10 @@ app.use(
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  return res.json({ msg: "hello world" });
+});
+
 app.get("/:data", (req, res) => {
   return res.json({ "hey your message": req.params.data });
 });
